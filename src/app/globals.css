@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen bg-ink-50 text-ink-900 antialiased dark:bg-ink-950 dark:text-ink-50;
+}
+
+::selection {
+  @apply bg-accent/20 text-ink-950 dark:bg-accent-muted/25 dark:text-ink-50;
+}
