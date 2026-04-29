@@ -13,7 +13,7 @@ export const projetos: Projeto[] = [
     periodo: "2023.2",
     disciplinas: ["Desenvolvimento Web", "Engenharia de Software"],
     tipo: "Frontend",
-    imagens: ["/images/pi1Imagem.jfif"],
+    imagens: ["/images/pi1Imagem.jpg"],
   },
   {
     id: "pi-2-sem",
@@ -29,7 +29,7 @@ export const projetos: Projeto[] = [
     disciplinas: ["Desenvolvimento Web", "Engenharia de Software", "Banco de dados relacional"],
     tipo: "Full-stack",
     destaque: true,
-    imagens: ["/images/PI2Imagem.jfif"],
+    imagens: ["/images/PI2Imagemjpg.jpg"],
   },
   {
     id: "pi-3-sem-lune",
@@ -45,7 +45,7 @@ export const projetos: Projeto[] = [
     disciplinas: ["Banco de dados não relacional", "Desenvolvimento Web", "Gestão ágil de projetos de software"],
     tipo: "Full-stack",
     colaborativo: true,
-    imagens: ["/images/pi3Imagem.jfif"],
+    imagens: ["/images/pi3Imagemjpg.jpg"],
   },
   {
     id: "pi-4-sem",
@@ -62,7 +62,7 @@ export const projetos: Projeto[] = [
     tipo: "Full-stack",
     colaborativo: true,
     destaque: true,
-    imagens: ["/images/pi4imagem.jfif"],
+    imagens: ["/images/pi4imagemjpg.jpg"],
   },
   {
     id: "pi-5-sem-agroconecta",
@@ -79,7 +79,7 @@ export const projetos: Projeto[] = [
     tipo: "Mobile + Backend",
     colaborativo: true,
     destaque: true,
-    imagens: ["/images/pi5imagem.jfif"],
+    imagens: ["/images/pi5imagemjpg.jpg"],
   },
 ];
 
