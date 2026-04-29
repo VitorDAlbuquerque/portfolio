@@ -17,7 +17,7 @@ export const experiencias: Experiencia[] = [
     periodo: "Jan 2025 - Atual",
     descricao: "Automação de laboratórios utilizando LIMS",
     sigla: "LW",
-    logoUrl: "/images/labware_logo.jfif",
+    logoUrl: "/images/labware_logo.jpg",
     logoAlt: "Logo da LabWare",
   },
   {
