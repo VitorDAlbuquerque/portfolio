@@ -12,6 +12,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
         serif: ["var(--font-serif)", "ui-serif", "Georgia", "serif"],
+        display: ['"Cormorant Garamond"', "Georgia", "serif"],
       },
       colors: {
         ink: {
@@ -31,6 +32,39 @@ const config: Config = {
           DEFAULT: "#2d5a4a",
           muted: "#4a7d6a",
           fg: "#e8f2ed",
+        },
+        frieren: {
+          base: "#0B1210",
+          surface: "#0E1812",
+          deep: "#080F0A",
+          overlay: "#060907",
+
+          border: "#1A2418",
+          "border-md": "#243A22",
+          "border-lg": "#3A5A38",
+
+          text: "#C4D0C8",
+          "text-md": "#6A8070",
+          "text-sm": "#3A5040",
+          "text-muted": "#203020",
+
+          green: "#5A8A58",
+          "green-md": "#3A5A38",
+          "green-dim": "#243A22",
+          "green-deep": "#0E1A0C",
+
+          purple: "#8A7AAE",
+          "purple-md": "#6A5A8A",
+          "purple-dim": "#2E2248",
+          "purple-deep": "#180E28",
+
+          amber: "#B87840",
+          "amber-md": "#8A5828",
+          "amber-dim": "#3A2010",
+          "amber-deep": "#140C04",
+
+          mist: "#8AB4A0",
+          "mist-dim": "#2A4038",
         },
       },
     },

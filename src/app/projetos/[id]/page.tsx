@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ProjectDetail } from "@/components/projects/ProjectDetail";
-import { getProjetoById, projetos } from "@/data/projects";
+import { getProjetoById, projetos } from "@/data/projetos";
 
 type Props = { params: { id: string } };
 
@@ -24,10 +24,10 @@ export default function ProjetoPage({ params }: Props) {
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
       <Link
-        href="/projetos"
-        className="mb-10 inline-block text-sm text-ink-600 hover:text-ink-900 dark:text-ink-400 dark:hover:text-ink-100"
+        href="/#projetos"
+        className="mb-10 inline-block text-sm text-frieren-text-md hover:text-frieren-text transition-colors"
       >
-        ← Voltar aos projetos
+        Voltar ao início
       </Link>
       <ProjectDetail projeto={projeto} />
     </div>

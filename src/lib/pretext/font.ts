@@ -1,4 +1,3 @@
-/** Build a canvas/CSS-compatible font string for @chenglou/pretext */
 export function canvasFont(
   sizePx: number,
   family: string,

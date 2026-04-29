@@ -4,7 +4,6 @@ import { canvasFont } from "./font";
 
 const ELLIPSIS = "…";
 
-/** Truncate text so Pretext layout uses at most `maxLines` at `maxWidth`. */
 export function truncateToMaxLines(
   text: string,
   maxWidth: number,

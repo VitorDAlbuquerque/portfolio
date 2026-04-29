@@ -1,19 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
 }
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: #3a5a38 #080f0a;
 }
 
-body {
-  @apply min-h-screen bg-ink-50 text-ink-900 antialiased dark:bg-ink-950 dark:text-ink-50;
+@layer base {
+  body {
+    @apply min-h-screen bg-frieren-base text-frieren-text antialiased;
+  }
+
+  ::selection {
+    @apply bg-frieren-purple-dim/80 text-frieren-text;
+  }
 }
 
-::selection {
-  @apply bg-accent/20 text-ink-950 dark:bg-accent-muted/25 dark:text-ink-50;
+.frieren-dots::after {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: #3a5a38;
+  box-shadow: 0.85rem 0 0 #6a5a8a, 1.7rem 0 0 #8a5828;
+  vertical-align: middle;
 }
+
+.forest-vine-divider {
+  display: block;
+  min-height: 1.6rem;
+  background-image: url("/images/vine-divider.svg");
+  background-repeat: repeat-x;
+  background-position: left center;
+  background-size: auto 100%;
+  opacity: 0.92;
+  filter: drop-shadow(0 1px 0 rgba(5, 10, 8, 0.85));
+}
+
+.section-vine-divider {
+  height: 16px;
+  width: 100%;
+  background-image: url("/images/section-vine-divider.svg");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: center;
+  opacity: 0.95;
+}
+.forest-about {
+  position: relative;
+  height: 280vh;
+}
+
+.forest-about__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: #060d10;
+}
+
+.forest-about__sky {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #040810 0%, #0d1f35 35%, #1a3a2a 70%, #0d1a10 100%);
+}
+
+.forest-about__stars circle {
+  fill: #fff;
+}
+
+.forest-about__stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.forest-about__moon {
+  position: absolute;
+  left: 50%;
+  top: 38px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #e8dfc0;
+  pointer-events: none;
+}
+
+.forest-about__layer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform-origin: 50% 100%;
+  pointer-events: none;
+}
+
+.forest-about__layer--five {
+  opacity: 0.25;
+}
+
+.forest-about__layer--four {
+  opacity: 0.4;
+}
+
+.forest-about__layer--three {
+  opacity: 0.65;
+}
+
+.forest-about__layer--two {
+  opacity: 0.88;
+}
+
+.forest-about__fog {
+  position: absolute;
+  bottom: 0;
+  left: -20%;
+  width: 140%;
+  height: 120px;
+  background: radial-gradient(ellipse at 50% 100%, rgba(140, 190, 160, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.forest-about__content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  width: 85%;
+  text-align: center;
+  color: #fff;
+  pointer-events: none;
+}
+
+.forest-about__photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.forest-about__photo-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(143, 186, 122, 0.6);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(143, 186, 122, 0.2);
+}
+
+.forest-about__name {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e8f0d8;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+}
+
+.forest-about__title {
+  margin-top: 8px;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #8fba7a;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s 0.1s, transform 0.6s 0.1s;
+}
+
+.forest-about__line {
+  margin: 16px auto;
+  height: 18px;
+  width: 0;
+  background-image: url("/images/vine-divider.svg");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: center;
+  filter: drop-shadow(0 1px 0 rgba(5, 10, 8, 0.85));
+  transition: width 0.8s 0.2s;
+  opacity: 0.95;
+}
+
+.forest-about__bio {
+  margin: 0 auto;
+  max-width: 380px;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+  color: rgba(200, 220, 190, 0.85);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s 0.3s, transform 0.6s 0.3s;
+}
+
+.forest-about__links {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.6s 0.45s;
+  pointer-events: none;
+}
+
+.forest-about__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 16px;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8fba7a;
+  border: 1px solid rgba(143, 186, 122, 0.4);
+  border-radius: 20px;
+  pointer-events: auto;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.forest-about__btn:hover {
+  border-color: rgba(143, 186, 122, 0.8);
+  color: #a9d691;
+}
+
+.forest-about__vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.spa-section {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+

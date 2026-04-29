@@ -49,7 +49,7 @@ export function ResponsiveHeading({
   return (
     <div ref={ref} className={`w-full ${className}`}>
       <Tag
-        className="text-ink-900 transition-[font-size] duration-150 dark:text-ink-50"
+        className="text-frieren-text transition-[font-size] duration-150"
         style={{
           fontSize: width ? `${fontSize}px` : `${minSize}px`,
           lineHeight: lineHeightRatio,

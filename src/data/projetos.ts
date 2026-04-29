@@ -1,96 +1,85 @@
-export interface Projeto {
-  id: string;
-  semestre: string;
-  titulo: string;
-  descricaoCurta: string;
-  descricaoLonga?: string;
-  repositorios: {
-    principal?: string;
-    frontend?: string;
-    backend?: string;
-  };
-  tecnologias: string[];
-  periodo: string; // ex: 2024.1
-  disciplinas: string[];
-  tipo: "Full-stack" | "Mobile + Backend" | "Frontend" | "Backend" | "Outro";
-  colaborativo?: boolean;
-  destaque?: boolean;
-  imagens?: string[];
-}
+import type { Projeto } from "@/types/project";
 
 export const projetos: Projeto[] = [
   {
     id: "pi-1-sem",
     semestre: "1º Semestre",
-    titulo: "Projeto Interdisciplinar - 1º Semestre",
-    descricaoCurta: "Primeiro projeto interdisciplinar do curso",
+    titulo: "Glowing Sea",
+    descricaoCurta: "Primeiro projeto interdisciplinar, ecommerce de produtos com foco em animais marinhos",
     repositorios: {
       principal: "https://github.com/VitorDAlbuquerque/PI-1sem",
     },
-    tecnologias: [],
-    periodo: "2023.1",
-    disciplinas: [],
-    tipo: "Outro",
+    tecnologias: ["Html", "CSS", "JavaScript"],
+    periodo: "2023.2",
+    disciplinas: ["Desenvolvimento Web", "Engenharia de Software"],
+    tipo: "Frontend",
+    imagens: ["/images/pi1Imagem.jfif"],
   },
   {
     id: "pi-2-sem",
     semestre: "2º Semestre",
-    titulo: "Projeto Interdisciplinar - 2º Semestre",
-    descricaoCurta: "Projeto full-stack do segundo semestre",
+    titulo: "Kiwi",
+    descricaoCurta: "Segundo projeto interdisciplinar, sistema de gerenciamento de filmes",
     repositorios: {
       frontend: "https://github.com/VitorDAlbuquerque/PI-2sem",
       backend: "https://github.com/VitorDAlbuquerque/p1-2sem-back",
     },
-    tecnologias: [],
-    periodo: "2023.2",
-    disciplinas: [],
+    tecnologias: ["Html", "CSS", "TypeScript", "React", "Node.js", "postgreSQL"],
+    periodo: "2024.1",
+    disciplinas: ["Desenvolvimento Web", "Engenharia de Software", "Banco de dados relacional"],
     tipo: "Full-stack",
+    destaque: true,
+    imagens: ["/images/PI2Imagem.jfif"],
   },
   {
     id: "pi-3-sem-lune",
     semestre: "3º Semestre",
     titulo: "Lune",
-    descricaoCurta: "Projeto Lune - Desenvolvimento Full-stack",
+    descricaoCurta: "Terceiro projeto interdisciplinar, sistema para facilitar a procura de trabalho",
     repositorios: {
       frontend: "https://github.com/ec-mv-2/Lune-front",
       backend: "https://github.com/ec-mv-2/Lune-back",
     },
-    tecnologias: [],
-    periodo: "2024.1",
-    disciplinas: [],
+    tecnologias: ["Html", "CSS", "TypeScript", "React", "Node.js", "MongoDB"],
+    periodo: "2024.2",
+    disciplinas: ["Banco de dados não relacional", "Desenvolvimento Web", "Gestão ágil de projetos de software"],
     tipo: "Full-stack",
     colaborativo: true,
+    imagens: ["/images/pi3Imagem.jfif"],
   },
   {
     id: "pi-4-sem",
     semestre: "4º Semestre",
     titulo: "Semaismenos",
-    descricaoCurta: "Projeto Semaismenos - Sistema Full-stack",
+    descricaoCurta: "Quarto projeto interdisciplinar, parser feito para encontrar imóveis de leilão",
     repositorios: {
       frontend: "https://github.com/Kauan-afk/pi4",
       backend: "https://github.com/VitorDAlbuquerque/pi4-back",
     },
-    tecnologias: [],
-    periodo: "2024.2",
-    disciplinas: [],
+    tecnologias: ["TypeScript", "React", "Python", "Firebase", "Tailwind CSS"],
+    periodo: "2025.1",
+    disciplinas: ["Laboratório de desenvolvimento web", "Integração e entrega contínua"],
     tipo: "Full-stack",
     colaborativo: true,
+    destaque: true,
+    imagens: ["/images/pi4imagem.jfif"],
   },
   {
     id: "pi-5-sem-agroconecta",
     semestre: "5º Semestre",
     titulo: "AgroConecta",
-    descricaoCurta: "Aplicativo mobile para conexão no agronegócio",
+    descricaoCurta: "Quinto projeto interdisciplinar, aplicativo mobile para intermédio de produtos agrícolas",
     repositorios: {
       frontend: "https://github.com/PI5-AgroConecta-Mobile/AgroConecta",
       backend: "https://github.com/PI5-AgroConecta-Mobile/AGROCONECTA-AP-",
     },
     tecnologias: ["React Native"],
-    periodo: "2025.1",
-    disciplinas: [],
+    periodo: "2025.2",
+    disciplinas: ["Laboratório de desenvolvimento para dispositivos móveis", "Programação para dispositivos móveis"],
     tipo: "Mobile + Backend",
     colaborativo: true,
     destaque: true,
+    imagens: ["/images/pi5imagem.jfif"],
   },
 ];
 

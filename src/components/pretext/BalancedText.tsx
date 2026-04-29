@@ -16,7 +16,6 @@ type BalancedTextProps = {
   justify?: boolean;
 };
 
-/** Paragraph with Pretext line breaks rendered per line (no DOM reflow for wrapping). */
 export function BalancedText({
   children,
   className = "",

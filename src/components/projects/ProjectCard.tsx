@@ -35,8 +35,11 @@ export function ProjectCard({ projeto }: ProjectCardProps) {
     projeto.repositorios.principal ?? projeto.repositorios.frontend ?? projeto.repositorios.backend ?? null;
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-ink-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-ink-800 dark:bg-ink-900/40">
-      <Link href={`/projetos/${projeto.id}`} className="relative block aspect-[16/10] w-full overflow-hidden bg-ink-100 dark:bg-ink-800">
+    <article className="group flex h-full flex-col overflow-hidden rounded-sm border border-frieren-border border-t-2 border-t-frieren-purple-dim bg-frieren-surface transition-colors duration-300 hover:border-frieren-border-md hover:border-t-frieren-purple">
+      <Link
+        href={`/projetos/${projeto.id}`}
+        className="relative block aspect-[16/10] w-full overflow-hidden bg-frieren-deep"
+      >
         <Image
           src={cover}
           alt=""
@@ -48,19 +51,21 @@ export function ProjectCard({ projeto }: ProjectCardProps) {
       </Link>
 
       <div className="flex flex-1 flex-col gap-3 p-5">
-        <div className="flex flex-wrap items-center gap-2 text-xs text-ink-600 dark:text-ink-300">
-          <span className="rounded-full bg-ink-100 px-2.5 py-1 dark:bg-ink-800">{projeto.semestre}</span>
-          <span className="inline-flex items-center gap-1 rounded-full bg-ink-100 px-2.5 py-1 dark:bg-ink-800">
+        <div className="flex flex-wrap items-center gap-2 text-xs text-frieren-text-sm">
+          <span className="rounded-sm bg-frieren-surface border border-frieren-border px-2 py-0.5">
+            {projeto.semestre}
+          </span>
+          <span className="inline-flex items-center gap-1 rounded-sm bg-frieren-surface border border-frieren-border px-2 py-0.5">
             <TipoIcon className="h-3.5 w-3.5" aria-hidden />
             {projeto.tipo}
           </span>
           {projeto.colaborativo ? (
-            <span className="rounded-full bg-ink-900 px-2.5 py-1 text-white dark:bg-ink-100 dark:text-ink-900">
+            <span className="rounded-sm bg-frieren-amber-deep border border-frieren-amber-dim px-2 py-0.5 text-frieren-amber-md">
               Colaborativo
             </span>
           ) : null}
           {projeto.destaque ? (
-            <span className="rounded-full bg-accent px-2.5 py-1 text-white dark:bg-accent-muted dark:text-ink-950">
+            <span className="rounded-sm bg-frieren-purple-deep border border-frieren-purple-dim px-2 py-0.5 text-frieren-purple-md">
               Destaque
             </span>
           ) : null}
@@ -91,18 +96,18 @@ export function ProjectCard({ projeto }: ProjectCardProps) {
           {projeto.tecnologias.slice(0, 4).map((t) => (
             <span
               key={t}
-              className="rounded-full bg-ink-100 px-2.5 py-0.5 text-xs text-ink-700 dark:bg-ink-800 dark:text-ink-200"
+              className="rounded-sm bg-frieren-surface border border-frieren-border px-2 py-0.5 text-xs text-frieren-text-sm"
             >
               {t}
             </span>
           ))}
         </div>
 
-        <div className="mt-auto flex items-center justify-between gap-3 pt-2 text-xs text-ink-500 dark:text-ink-400">
+        <div className="mt-auto flex items-center justify-between gap-3 pt-2 text-xs text-frieren-text-md">
           <span className="truncate">{projeto.periodo}</span>
           <Link
             href={`/projetos/${projeto.id}`}
-            className="inline-flex items-center gap-1 font-medium text-accent dark:text-accent-muted"
+            className="inline-flex items-center gap-1 text-frieren-purple-md underline-offset-4 hover:text-frieren-purple hover:underline transition-colors"
           >
             Ver projeto
             <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
@@ -115,7 +120,7 @@ export function ProjectCard({ projeto }: ProjectCardProps) {
               href={projeto.repositorios.frontend}
               target="_blank"
               rel="noreferrer"
-              className="text-ink-600 underline-offset-4 hover:underline dark:text-ink-300"
+              className="text-frieren-text-md underline-offset-4 hover:underline hover:text-frieren-text transition-colors"
             >
               Frontend
             </a>
@@ -125,7 +130,7 @@ export function ProjectCard({ projeto }: ProjectCardProps) {
               href={projeto.repositorios.backend}
               target="_blank"
               rel="noreferrer"
-              className="text-ink-600 underline-offset-4 hover:underline dark:text-ink-300"
+              className="text-frieren-text-md underline-offset-4 hover:underline hover:text-frieren-text transition-colors"
             >
               Backend
             </a>
@@ -135,7 +140,7 @@ export function ProjectCard({ projeto }: ProjectCardProps) {
               href={repoPrimary}
               target="_blank"
               rel="noreferrer"
-              className="ml-auto inline-flex items-center gap-1 text-ink-600 underline-offset-4 hover:underline dark:text-ink-300"
+              className="ml-auto inline-flex items-center gap-1 text-frieren-text-md underline-offset-4 hover:underline hover:text-frieren-text transition-colors"
               aria-label="Abrir no GitHub"
               title="Abrir no GitHub"
             >

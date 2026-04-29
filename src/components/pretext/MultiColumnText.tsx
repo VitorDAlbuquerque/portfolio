@@ -17,10 +17,6 @@ type MultiColumnTextProps = {
   fontWeight?: number | string;
 };
 
-/**
- * Texto em colunas com `column-fill: balance` e altura mínima estimada via Pretext
- * (largura de coluna ≈ container / N) para evitar saltos bruscos de layout.
- */
 export function MultiColumnText({
   children,
   className = "",
@@ -50,7 +46,7 @@ export function MultiColumnText({
   return (
     <div ref={ref} className={className}>
       <blockquote
-        className="text-ink-800 dark:text-ink-100 border-l-2 border-accent pl-4"
+        className="text-frieren-text-md border-l-2 border-frieren-green-md pl-4"
         style={{
           columnCount: columns,
           columnGap: `${gapRem}rem`,
