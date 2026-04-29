@@ -14,7 +14,7 @@ export const educacao: Educacao[] = [
     id: "fatec-dsm",
     instituicao: "Fatec Zona Leste",
     curso: "Desenvolvimento de Software Multiplataforma",
-    periodo: "Cursando",
+    periodo: "Ago 2023 - Jun 2026",
     descricao:
       "Graduação focada em desenvolvimento full stack, arquitetura de software e práticas de engenharia aplicadas a projetos interdisciplinares.",
     sigla: "FATEC",
